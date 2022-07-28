@@ -11,10 +11,14 @@ def calcular(v1, v2, op)
         return "Resultado da multiplicação: #{c.multiplicar(v1, v2)}"
     when "/"
         return "Resultado da divisão: #{c.dividir(v1, v2)}"
+    when "**"
+        return "Resultado da potenciação: #{c.potencia(v1, v2)}"
+    when "%"
+        return "Resultado do módulo: #{c.modulo(v1, v2)}"
     end
         
 end
 
-puts calcular(2, 2, "/")
+puts calcular(2, 2, "**")
 
 
