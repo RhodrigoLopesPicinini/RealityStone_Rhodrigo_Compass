@@ -1,5 +1,7 @@
 class Calculadora
 
+    @@invalid = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z","ç"]
+
     def somar(v1, v2)
         resultado = v1 + v2
         resultado
@@ -54,6 +56,16 @@ class Calculadora
     end
 
     def calcularEval(expression)
-        return "#{expression} = #{eval(expression)}"
+        expressionArray = expression.split("")
+        expressionArray.each do |valor|
+            if @@invalid[0..@@invalid.length].include?(valor)
+                return "Não é possível processar letras na expressão!"
+            else
+                nil
+            end
+        end
+
+        "#{expression} = #{eval(expression)}"
+
     end
 end
