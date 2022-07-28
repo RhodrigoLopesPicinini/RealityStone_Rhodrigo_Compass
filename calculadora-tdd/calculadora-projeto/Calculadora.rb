@@ -33,10 +33,7 @@ class Calculadora
     end
 
     def calcular(v1, v2, op)
-        if(v1.class == String or v2.class == String)
-            return "Valor inserido não é inteiro ou flutuante"
-        
-        else
+        begin
             case op
             when "+"
                 return "#{v1} + #{v2} = #{somar(v1, v2)}"
@@ -51,8 +48,9 @@ class Calculadora
             when "%"
                 return "#{v1} % #{v2} = #{modulo(v1, v2)}"
             end
+        rescue TypeError
+            "Valor inserido não é Integer ou Float"
         end
-            
     end
 
     def calcularEval(expression)
