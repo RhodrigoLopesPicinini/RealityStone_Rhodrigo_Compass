@@ -56,5 +56,4 @@ class Calculadora
     def calcularEval(expression)
         return "#{expression} = #{eval(expression)}"
     end
-
 end
