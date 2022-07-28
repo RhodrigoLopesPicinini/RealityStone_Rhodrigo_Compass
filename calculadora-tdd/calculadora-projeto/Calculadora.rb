@@ -56,16 +56,19 @@ class Calculadora
     end
 
     def calcularEval(expression)
-        expressionArray = expression.split("")
-        expressionArray.each do |valor|
-            if @@invalid[0..@@invalid.length].include?(valor)
-                return "Não é possível processar letras na expressão!"
-            else
-                nil
+        begin
+            expressionArray = expression.split("")
+            expressionArray.each do |valor|
+                if @@invalid[0..@@invalid.length].include?(valor)
+                    return "Não é possível processar letras na expressão!"
+                else
+                    nil
+                end
             end
+
+            "#{expression} = #{eval(expression)}"
+        rescue SyntaxError
+            "Valor ou conjunto de valores inseridos incorretamente na expressão!"
         end
-
-        "#{expression} = #{eval(expression)}"
-
     end
 end
