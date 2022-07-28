@@ -20,4 +20,14 @@ class Calculadora
         resultado
     end
 
+    def potencia(v1, v2)
+        resultado = v1 ** v2
+        resultado
+    end
+
+    def modulo(v1, v2)
+        resultado = v1 % v2
+        resultado
+    end
+
 end
