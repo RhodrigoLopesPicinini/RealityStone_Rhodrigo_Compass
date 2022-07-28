@@ -3,34 +3,34 @@ class Calculadora
     #Lista de valores inválidos
     @@invalid = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z","ç"]
 
-    #Operações
+        #Operações
     def somar(v1, v2)
-        resultado = v1 + v2
+        resultado = (v1) + (v2)
         floatOrNot(resultado)
     end
 
     def subtrair(v1, v2)
-        resultado = v1 - v2
+        resultado = (v1) - (v2)
         floatOrNot(resultado)
     end
 
     def dividir(v1, v2)
-        resultado = v1 / v2
+        resultado = (v1) / (v2)
         floatOrNot(resultado)
     end
 
     def multiplicar(v1, v2)
-        resultado = v1 * v2
+        resultado = (v1) * (v2)
         floatOrNot(resultado)
     end
 
     def potencia(v1, v2)
-        resultado = v1 ** v2
+        resultado = (v1) ** (v2)
         floatOrNot(resultado)
     end
 
     def modulo(v1, v2)
-        resultado = v1 % v2
+        resultado = (v1) % (v2)
         floatOrNot(resultado)
     end
 
@@ -55,6 +55,9 @@ class Calculadora
             end
         rescue TypeError
             "Valor inserido não é Integer ou Float"
+
+        rescue ArgumentError
+            "Não foi inserido os valores necessários para realizar o cálculo"
         end
     end
 
