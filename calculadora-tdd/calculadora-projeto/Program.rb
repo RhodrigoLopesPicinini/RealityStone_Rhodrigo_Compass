@@ -4,17 +4,17 @@ def calcular(v1, v2, op)
     c = Calculadora.new
     case op
     when "+"
-        return "Resultado da soma: #{c.somar(v1, v2)}"
+        return "#{v1} + #{v2} = #{c.somar(v1, v2)}"
     when "-"
-        return "Resultado da subtração: #{c.subtrair(v1, v2)}"
+        return "#{v1} - #{v2} = #{c.subtrair(v1, v2)}"
     when "*"
-        return "Resultado da multiplicação: #{c.multiplicar(v1, v2)}"
+        return "#{v1} * #{v2} = #{c.multiplicar(v1, v2)}"
     when "/"
-        return "Resultado da divisão: #{c.dividir(v1, v2)}"
+        return "#{v1} / #{v2} = #{c.dividir(v1, v2)}"
     when "**"
-        return "Resultado da potenciação: #{c.potencia(v1, v2)}"
+        return "#{v1} ** #{v2} = #{c.potencia(v1, v2)}"
     when "%"
-        return "Resultado do módulo: #{c.modulo(v1, v2)}"
+        return "#{v1} % #{v2} = #{c.modulo(v1, v2)}"
     end
         
 end
