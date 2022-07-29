@@ -12,13 +12,13 @@ O sistema da calculadora torna possível fazer cálculos com operadores básicos
 Antes de começar a utilizar a calculadora, é necessário atender os seguintes pré-requisitos:
 
 * :white_check_mark: [Ruby 3.1+](https://www.ruby-lang.org/pt/downloads/)
-* :white_check_mark: [Gems RSpec e Pry](calculadora-tdd/Gemfile)
+* :white_check_mark: [Gems RSpec e Pry](Gemfile)
 * :white_check_mark: [Git](https://git-scm.com/)
   - Opcional:
 * [Cmder](https://github.com/cmderdev/cmder.git)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-### :computer: Instalação
+## :computer: Instalação
 > Se você estiver utilizando o sistema operacional Windows na sua máquina, baixe o instalador do [Ruby](#pré-requisitos) para prosseguir.
 
 Para instalar os pré-requisitos:
@@ -44,11 +44,11 @@ git clone https://github.com/RhodrigoLopesPicinini/RealityStone_Rhodrigo_Compass
 ```ruby
 ruby Program.rb
 ```
-# Demo
+## Demo
 # ![](resources/operacaoBasica.gif)
 # ![](resources/operacaoEval.gif)
 
-
+### Testes
 * Caso for utilizar os testes da calculadora, executar o arquivo [Gemfile](Gemfile).
 ```ruby
 bundle
@@ -66,8 +66,8 @@ rspec {calcular_spec.rb/calcularEval.rb/operadores_spec.rb}
 Olá, me chamo Rhodrigo e estou cursando Ciência da Computação, este projeto vem do Programa de Bolsas de Automação de testes front-end com Ruby da Compass.UOL, como uma forma de estudar a linguagem Ruby e a prática de TDD.
 
 **Contato:** 
-[GitHub](https://github.com/RhodrigoLopesPicinini)
-rhodrigolpicinini@hotmail.com 
+- [GitHub](https://github.com/RhodrigoLopesPicinini)
+- rhodrigolpicinini@hotmail.com 
 
 ## Contribuidores
 
