@@ -102,6 +102,15 @@ describe('Calculadora') do
     it("Módulo/Resto dos valores flutuantes 2.2 e 2") do
         expect(calculadora.modulo(2.2, 2)).to eq(0.2)
     end
+
+    #EXCEÇÕES
+    it("Quando não inserido valor(es) necessários no parâmetro do método") do
+        expect{calculadora.somar()}.to raise_error(ArgumentError)
+        expect{calculadora.subtrair(1)}.to raise_error(ArgumentError)
+        expect{calculadora.subtrair(1,)}.to raise_error(ArgumentError)
+        expect{calculadora.subtrair()}.to raise_error(ArgumentError)
+        expect{calculadora.subtrair("1")}.to raise_error(ArgumentError)
+    end
 end
 
 
