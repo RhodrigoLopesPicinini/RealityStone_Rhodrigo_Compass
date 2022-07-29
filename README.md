@@ -44,9 +44,9 @@ git clone https://github.com/RhodrigoLopesPicinini/RealityStone_Rhodrigo_Compass
 ```ruby
 ruby Program.rb
 ```
-Demo
-![](resources/operacaoBasica.gif)
-![](resources/operacaoEval.gif)
+# Demo
+# ![](resources/operacaoBasica.gif)
+# ![](resources/operacaoEval.gif)
 
 
 * Caso for utilizar os testes da calculadora, executar o arquivo [Gemfile](Gemfile).
