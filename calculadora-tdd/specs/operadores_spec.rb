@@ -111,6 +111,14 @@ describe('Calculadora') do
         expect{calculadora.subtrair()}.to raise_error(ArgumentError)
         expect{calculadora.subtrair("1")}.to raise_error(ArgumentError)
     end
+
+    it("Divisão por zero") do
+        expect(calculadora.dividir(2, 0)).to eq("Não é possível dividir por zero!")
+    end
+
+    it("Módulo/Resto da divisão por zero") do
+        expect(calculadora.modulo(2, 0)).to eq("Não é possível dividir por zero!")
+    end
 end
 
 

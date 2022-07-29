@@ -51,5 +51,9 @@ describe('Calculadora') do
         expect{calculadora.calcularEval()}.to raise_error(ArgumentError)
     end
 
+    it("Dividir um número por zero") do
+        expect(calculadora.calcularEval("1/0")).to eql("Não é possível dividir um número por zero!")
+    end
+
 
 end
