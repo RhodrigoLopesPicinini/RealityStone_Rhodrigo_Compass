@@ -4,14 +4,22 @@ c = Calculadora.new
 
 def definirNumeros
     print "Primeiro valor: "
-    v1 = gets.chomp.to_i
-    print "Segundo valor: "
-    v2 = gets.chomp.to_i
-    if v1 != Integer || v1 != Float || v2 != Integer || v2 != Float
-        raise NameError
+    v1 = gets.chomp
+    if v1.include? "."
+        v1 = Float(v1)
     else
-        return v1, v2
+        v1 = Integer(v1)
     end
+    print "Segundo valor: "
+    v2 = gets.chomp
+    if v2.include? "."
+        v2 = Float(v2)
+    else
+        v2 = Integer(v2)
+    end
+
+    return v1, v2
+
 end
 
 loop do
@@ -59,10 +67,10 @@ loop do
         print "Enter para continuar"
         gets
 
-    rescue NameError
-        p "Insira valores válidos para a operação"
-        print "Retornando a calculadora, enter para continuar"
-        input = gets
+     #rescue NameError
+        #p "Insira valores válidos para a operação"
+        #print "Retornando a calculadora, enter para continuar"
+        #input = gets
     end
 
     system("clear") || system("cls")
