@@ -15,8 +15,13 @@ class Calculadora
     end
 
     def dividir(v1, v2)
-        resultado = (v1) / (v2)
-        floatOrNot(resultado)
+        case v2
+        when 0
+            "Não é possível dividir por zero!"
+        else
+            resultado = (v1) / (v2)
+            floatOrNot(resultado)
+        end
     end
 
     def multiplicar(v1, v2)
@@ -30,8 +35,13 @@ class Calculadora
     end
 
     def modulo(v1, v2)
-        resultado = (v1) % (v2)
-        floatOrNot(resultado)
+        case v2
+        when 0
+            "Não é possível dividir por zero!"
+        else
+            resultado = (v1) % (v2)
+            floatOrNot(resultado)
+        end
     end
 
     #Método calcular, recebe dois valores e o operador e retorna o valor da expressão formada
@@ -75,6 +85,8 @@ class Calculadora
             end
 
             "#{expression} = #{eval(expression)}"
+        rescue ZeroDivisionError
+            "Não é possível dividir um número por zero!"
         rescue SyntaxError
             "Valor ou conjunto de valores inseridos incorretamente na expressão!"
         end
